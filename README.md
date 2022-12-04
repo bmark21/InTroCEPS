@@ -57,8 +57,10 @@
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+To adhere to github repository limitations, the "ibtracs.ALL.list.v04r00.csv" has been split into 8 parts, each under 50MB.
+The 8 part csv has splitted name format of "data_part_#"...
+
+To run the scripts included with this project and to obtain the results as described within the report is straightforward...
 
 ### Prerequisites
 
@@ -68,7 +70,7 @@ To get a local copy up and running follow these simple example steps.
 
 1. Install python: https://www.python.org/downloads/
 2. Download this repository
-3. Navigate to sources folder of this project within a terminal console
+3. Navigate to the sources folder of this project within a terminal console
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -81,9 +83,11 @@ Each specific ML approach discussed in the paper is contained within the folder 
 behind the approach in question. Navigate to the corresponding approach/author folder and run the corresponding
 python script.
 
-ANN:
-Decision Tree:
-Ann Alternative: 
+ANN: source\Mark_B\
+
+Decision Tree: source\Igor_J
+
+Ann Alternative: source\Keerthana_S
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -113,26 +117,10 @@ Project Link: https://github.com/bmark21/InTroCEPS
 
 * Knapp, Kenneth R.; Diamond, Howard J.; Kossin, James P.; Kruk, Michael C.; Schreck, Carl J. III (2018). International Best Track Archive for Climate Stewardship (IBTrACS) Project, Version 4. [indicate subset used]. NOAA National Centers for Environmental Information. https://doi.org/10.25921/82ty-9e16 [12/2/2022].
 * Knapp, K. R., M. C. Kruk, D. H. Levinson, H. J. Diamond, and C. J. Neumann, 2010: The International Best Track Archive for Climate Stewardship (IBTrACS): Unifying tropical cyclone best track data. Bulletin of the American Meteorological Society, 91, 363-376. doi:10.1175/2009BAMS2755.1
-* []()
+* Geiger, Tobias; Frieler, Katja; Bresch, David N. (2017): A global data set of tropical cyclone exposure (TCE-DAT). GFZ Data Services. https://doi.org/10.5880/pik.2017.005
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-
-<!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/github_username/repo_name.svg?style=for-the-badge
-[contributors-url]: https://github.com/github_username/repo_name/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/github_username/repo_name.svg?style=for-the-badge
-[forks-url]: https://github.com/github_username/repo_name/network/members
-[stars-shield]: https://img.shields.io/github/stars/github_username/repo_name.svg?style=for-the-badge
-[stars-url]: https://github.com/github_username/repo_name/stargazers
-[issues-shield]: https://img.shields.io/github/issues/github_username/repo_name.svg?style=for-the-badge
-[issues-url]: https://github.com/github_username/repo_name/issues
-[license-shield]: https://img.shields.io/github/license/github_username/repo_name.svg?style=for-the-badge
-[license-url]: https://github.com/github_username/repo_name/blob/master/LICENSE.txt
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/linkedin_username
-[product-screenshot]: images/screenshot.png
 [Python.io]: https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54
 [Python-url]: https://www.python.org/
