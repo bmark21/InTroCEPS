@@ -10,7 +10,7 @@ import sys
 pathName = "C:\\Users\\Main\\Desktop\\ECE5424\\Final\\InTroCEPS\\datasets\\"
 fileName = ''
 
-#Build pandas dataFrame from all 8 IBTrACS parts
+#Build dataFrame from all 8 IBTrACS parts
 for i in range(8):
     fileName = "data_part_" + str(i + 1) + ".csv"
     dataFramePart = pd.read_csv(pathName + fileName)
@@ -50,11 +50,11 @@ print(dataFrameBuild)
 
 
 #We iterate through the tropical storms and collect the first 17 tracking points for them.
-#Tracking points 1, 5, 9, 13, 17, 21, and 25 are utilized (5 points) and the storm information at
+#Tracking points 1, 5, 9, 13, 17, 21, are utilized (6 points) and the storm information at
 #these points are converted to features. Therefore, each storm will have its Basin, Time,
-#Lat, Long, Wind, Press, Storm Speed, and Storm Dir presented at 0 hours (storm origin),
-#12 hours, 24 hours, 36 hours, 48 hours, 60 hours, and 72 hours.
-#This process filters out all storms that survived less than 3 days.
+#Lat, Long, Storm Speed, and Storm Dir presented at 0 hours (storm origin),
+#12 hours, 24 hours, 36 hours, 48 hours, and 60 hours.
+#This process filters out all storms that survived less than 2.5 days.
 storm_trackCount_Dictionary = {}
 local_StormTrackCount = 0
 local_StormSID = ""
