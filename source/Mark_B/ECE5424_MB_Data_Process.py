@@ -80,7 +80,7 @@ for index, row in dataFrameBuild.iterrows():
                 local_StormFrame = pd.DataFrame()
             local_StormFrame = local_StormFrame.append(row)
         if (local_StormSID != row['SID']): #Occurs when we've encountered a row that belongs to a new storm. In this case, process the previous storm DataFrame
-            print("Now on new storm. Process old storm.")
+            #print("Now on new storm. Process old storm.")
             stormRow = pd.DataFrame()
             rowFrameBuilderIter = 0
             if (len(local_StormFrame.index) >= 21):
