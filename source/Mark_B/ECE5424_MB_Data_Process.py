@@ -80,12 +80,12 @@ for index, row in dataFrameBuild.iterrows():
                 local_StormFrame = pd.DataFrame()
             local_StormFrame = local_StormFrame.append(row)
         if (local_StormSID != row['SID']): #Occurs when we've encountered a row that belongs to a new storm. In this case, process the previous storm DataFrame
-            #print("Now on new storm. Process old storm.")
+            print("Now on new storm. Process old storm.")
             stormRow = pd.DataFrame()
             rowFrameBuilderIter = 0
             if (len(local_StormFrame.index) >= 21):
                 print("Valid storm")
-                print(local_StormFrame)
+                #print(local_StormFrame)
                 for SRCindex,SRCrow, in local_StormFrame.iterrows():
                     if (rowFrameBuilderIter == 0): #rowFrameBuilderIter == 0 dicates we include SID
                         rowFrameBuilderSID = [SRCrow['SID']]
@@ -191,7 +191,7 @@ for index, row in dataFrameBuild.iterrows():
                                 processedStormDataFrame = processedStormDataFrame.append(stormRow)
                                 break
                     rowFrameBuilderIter += 1
-            else:
+            #else:
                 #print("Invalid storm")
                 
             #print("Setup for new storm")
@@ -209,4 +209,4 @@ for index, row in dataFrameBuild.iterrows():
         
         
 print(processedStormDataFrame)
-processedStormDataFrame.to_csv(index=False)
+processedStormDataFrame.to_csv("processedStormDataFrame.csv")
