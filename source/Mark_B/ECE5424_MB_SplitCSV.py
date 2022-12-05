@@ -3,24 +3,22 @@
 #
 #Reference: (https://mungingdata.com/python/split-csv-write-chunk-pandas/)
 
-chunk_size = 90000
+dataPerPart = 90000
 
-
-def write_chunk(part, lines):
-    with open('../data_part_'+ str(part) +'.csv', 'w') as f_out:
-        f_out.write(header)
-        f_out.writelines(lines)
+def writePart(part, data):
+    with open('../data_part_'+ str(part) +'.csv', 'w') as outputWriter:
+        outputWriter.write(header)
+        outputWriter.writelines(data)
         
-with open(r"C:\Users\Main\Desktop\ECE5424\Final\InTroCEPS\datasets\ibtracs.ALL.list.v04r00.csv", "r") as f:
+with open(r"C:\Users\Main\Desktop\ECE5424\Final\InTroCEPS\datasets\ibtracs.ALL.list.v04r00.csv", "r") as file:
     count = 0
-    header = f.readline()
-    lines = []
-    for line in f:
+    header = file.readline()
+    data = []
+    for line in file:
         count += 1
-        lines.append(line)
-        if count % chunk_size == 0:
-            write_chunk(count // chunk_size, lines)
-            lines = []
-    # write remainder
-    if len(lines) > 0:
-        write_chunk((count // chunk_size) + 1, lines)
+        data.append(line)
+        if count % dataPerPart == 0:
+            writePart(count // dataPerPart, data)
+            data = []
+    if len(data) > 0:
+        writePart((count // dataPerPart) + 1, data)

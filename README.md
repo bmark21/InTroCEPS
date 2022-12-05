@@ -58,7 +58,10 @@
 ## Getting Started
 
 To adhere to github repository limitations, the "ibtracs.ALL.list.v04r00.csv" has been split into 8 parts, each under 50MB.
-The 8 part csv has splitted name format of "data_part_#"...
+This was done using the "ECE5424_MB_SplitCSV.py" python script located in "\sources\Mark_B\". The 8 part csv has splitted 
+name format of "data_part_#"...
+
+These 8 parts of the IBTrACS are all loaded and assembled within the main scripts for each method.
 
 To run the scripts included with this project and to obtain the results as described within the report is straightforward...
 
@@ -83,11 +86,11 @@ Each specific ML approach discussed in the paper is contained within the folder 
 behind the approach in question. Navigate to the corresponding approach/author folder and run the corresponding
 python script.
 
-ANN: source\Mark_B\
+ANN - "source\Mark_B\"
 
-Decision Tree: source\Igor_J
+Decision Tree - "source\Igor_J\"
 
-Ann Alternative: source\Keerthana_S
+Ann Alternative - "source\Keerthana_S\"
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -111,9 +114,7 @@ Project Link: https://github.com/bmark21/InTroCEPS
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-
-<!-- ACKNOWLEDGMENTS -->
-## Acknowledgments
+## References
 
 * Knapp, Kenneth R.; Diamond, Howard J.; Kossin, James P.; Kruk, Michael C.; Schreck, Carl J. III (2018). International Best Track Archive for Climate Stewardship (IBTrACS) Project, Version 4. [indicate subset used]. NOAA National Centers for Environmental Information. https://doi.org/10.25921/82ty-9e16 [12/2/2022].
 * Knapp, K. R., M. C. Kruk, D. H. Levinson, H. J. Diamond, and C. J. Neumann, 2010: The International Best Track Archive for Climate Stewardship (IBTrACS): Unifying tropical cyclone best track data. Bulletin of the American Meteorological Society, 91, 363-376. doi:10.1175/2009BAMS2755.1
