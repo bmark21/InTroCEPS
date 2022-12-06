@@ -115,8 +115,8 @@ for index, row in dataFrameBuild.iterrows():
                         stormRow['DAY'] = dt_Extract.day
                         stormRow['LAT_0hr'] = rowFrameBuilderLAT
                         stormRow['LONG_0hr'] = rowFrameBuilderLONG
-                        #stormRow['WMO_WIND_0hr'] = rowFrameBuilderWMO_WIND
-                        #stormRow['WMO_PRES_0hr'] = rowFrameBuilderWMO_PRES
+                        stormRow['WMO_WIND_0hr'] = rowFrameBuilderWMO_WIND
+                        stormRow['WMO_PRES_0hr'] = rowFrameBuilderWMO_PRES
                         stormRow['STORM_SPEED_0hr'] = rowFrameBuilderSTORM_SPEED
                         stormRow['STORM_DIR_0hr'] = rowFrameBuilderSTORM_DIR                    
                     if (rowFrameBuilderIter > 0):
@@ -130,8 +130,8 @@ for index, row in dataFrameBuild.iterrows():
                                 rowFrameBuilderSTORM_DIR = [SRCrow['STORM_DIR']]
                                 stormRow['LAT_12hr'] = rowFrameBuilderLAT
                                 stormRow['LONG_12hr'] = rowFrameBuilderLONG
-                                #stormRow['WMO_WIND_12hr'] = rowFrameBuilderWMO_WIND
-                                #stormRow['WMO_PRES_12hr'] = rowFrameBuilderWMO_PRES
+                                stormRow['WMO_WIND_12hr'] = rowFrameBuilderWMO_WIND
+                                stormRow['WMO_PRES_12hr'] = rowFrameBuilderWMO_PRES
                                 stormRow['STORM_SPEED_12hr'] = rowFrameBuilderSTORM_SPEED
                                 stormRow['STORM_DIR_12hr'] = rowFrameBuilderSTORM_DIR
                             case 8:
@@ -143,8 +143,8 @@ for index, row in dataFrameBuild.iterrows():
                                 rowFrameBuilderSTORM_DIR = [SRCrow['STORM_DIR']]
                                 stormRow['LAT_24hr'] = rowFrameBuilderLAT
                                 stormRow['LONG_24hr'] = rowFrameBuilderLONG
-                                #stormRow['WMO_WIND_24hr'] = rowFrameBuilderWMO_WIND
-                                #stormRow['WMO_PRES_24hr'] = rowFrameBuilderWMO_PRES
+                                stormRow['WMO_WIND_24hr'] = rowFrameBuilderWMO_WIND
+                                stormRow['WMO_PRES_24hr'] = rowFrameBuilderWMO_PRES
                                 stormRow['STORM_SPEED_24hr'] = rowFrameBuilderSTORM_SPEED
                                 stormRow['STORM_DIR_24hr'] = rowFrameBuilderSTORM_DIR
                             case 12:
@@ -156,8 +156,8 @@ for index, row in dataFrameBuild.iterrows():
                                 rowFrameBuilderSTORM_DIR = [SRCrow['STORM_DIR']]
                                 stormRow['LAT_36hr'] = rowFrameBuilderLAT
                                 stormRow['LONG_36hr'] = rowFrameBuilderLONG
-                                #stormRow['WMO_WIND_36hr'] = rowFrameBuilderWMO_WIND
-                                #stormRow['WMO_PRES_36hr'] = rowFrameBuilderWMO_PRES
+                                stormRow['WMO_WIND_36hr'] = rowFrameBuilderWMO_WIND
+                                stormRow['WMO_PRES_36hr'] = rowFrameBuilderWMO_PRES
                                 stormRow['STORM_SPEED_36hr'] = rowFrameBuilderSTORM_SPEED
                                 stormRow['STORM_DIR_36hr'] = rowFrameBuilderSTORM_DIR
                             case 16:
@@ -169,8 +169,8 @@ for index, row in dataFrameBuild.iterrows():
                                 rowFrameBuilderSTORM_DIR = [SRCrow['STORM_DIR']]
                                 stormRow['LAT_48hr'] = rowFrameBuilderLAT
                                 stormRow['LONG_48hr'] = rowFrameBuilderLONG
-                                #stormRow['WMO_WIND_48hr'] = rowFrameBuilderWMO_WIND
-                                #stormRow['WMO_PRES_48hr'] = rowFrameBuilderWMO_PRES
+                                stormRow['WMO_WIND_48hr'] = rowFrameBuilderWMO_WIND
+                                stormRow['WMO_PRES_48hr'] = rowFrameBuilderWMO_PRES
                                 stormRow['STORM_SPEED_48hr'] = rowFrameBuilderSTORM_SPEED
                                 stormRow['STORM_DIR_48hr'] = rowFrameBuilderSTORM_DIR
                             case 20:
@@ -182,8 +182,8 @@ for index, row in dataFrameBuild.iterrows():
                                 rowFrameBuilderSTORM_DIR = [SRCrow['STORM_DIR']]
                                 stormRow['LAT_60hr'] = rowFrameBuilderLAT
                                 stormRow['LONG_60hr'] = rowFrameBuilderLONG
-                                #stormRow['WMO_WIND_60hr'] = rowFrameBuilderWMO_WIND
-                                #stormRow['WMO_PRES_60hr'] = rowFrameBuilderWMO_PRES
+                                stormRow['WMO_WIND_60hr'] = rowFrameBuilderWMO_WIND
+                                stormRow['WMO_PRES_60hr'] = rowFrameBuilderWMO_PRES
                                 stormRow['STORM_SPEED_60hr'] = rowFrameBuilderSTORM_SPEED
                                 stormRow['STORM_DIR_60hr'] = rowFrameBuilderSTORM_DIR
                                 #print("Storm row assembled")
@@ -209,4 +209,4 @@ for index, row in dataFrameBuild.iterrows():
         
         
 print(processedStormDataFrame)
-processedStormDataFrame.to_csv("processedStormDataFrame.csv")
+processedStormDataFrame.to_csv("processedStormDataFrame2.csv")
