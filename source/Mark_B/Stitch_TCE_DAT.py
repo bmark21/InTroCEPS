@@ -1,8 +1,8 @@
+##Mark Bright - Fall 2022 - ECE5424 Final - InTroCEPS
+#This stitched the IBTrACS data with the TCE-DAT data
 import pandas as pd
 import numpy as np
-from collections import defaultdict
 import csv
-from datetime import datetime
 import sys
 
 ########## Load ##########
@@ -13,15 +13,16 @@ fileNameTCD = 'TCE-DAT_2015-exposure_1950-2015.csv'
 processedStormdataFrame = pd.read_csv(pathName + fileNamePSD)
 TCEDATdataFrame = pd.read_csv(pathName + fileNameTCD)
 
-print("The variable, proceseedStormdataFrame is of type: ", type(processedStormdataFrame))
+print("The variable, processedStormdataFrame is of type: ", type(processedStormdataFrame))
 print(processedStormdataFrame)
 
 print("The variable, TCEDATdataFrame is of type: ", type(TCEDATdataFrame))
 print(TCEDATdataFrame)
 
+
 iter = 0
 stitchedStormDataFrame = pd.DataFrame()
-for index, SDFrow in TCEDATdataFrame.iterrows():
+for indexT, SDFrow in TCEDATdataFrame.iterrows():
     iter += 1
     key = SDFrow['IBTrACS_ID']
     
@@ -32,8 +33,10 @@ for index, SDFrow in TCEDATdataFrame.iterrows():
     rowFrameBuilder96kn_pop = [SDFrow['96kn_pop']]
     rowFrameBuilder96kn_assets = [SDFrow['96kn_assets']]
     stormRow = pd.DataFrame()
-    for index, SRCrow in processedStormdataFrame.iterrows():
+    print(len(processedStormdataFrame.index))
+    for indexB, SRCrow in processedStormdataFrame.iterrows():
         if (key == SRCrow ['SID']):
+            print(indexB)
             rowFrameBuilderSID = [SRCrow['SID']]
             rowFrameBuilderBASIN = [SRCrow['BASIN']]
             rowFrameBuilderMONTH = [SRCrow['MONTH']]
@@ -121,6 +124,7 @@ for index, SDFrow in TCEDATdataFrame.iterrows():
             stormRow['96kn_pop'] = rowFrameBuilder96kn_pop
             stormRow['96kn_assets'] = rowFrameBuilder96kn_assets
             stitchedStormDataFrame = stitchedStormDataFrame.append(stormRow)
+            processedStormdataFrame = processedStormdataFrame.drop(indexB)
             break
     #if (iter > 3):
         #break
