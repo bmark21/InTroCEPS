@@ -1,4 +1,4 @@
-##Mark Bright - Fall 2022 - ECE5424 Final - InTroCEPS
+#Mark Bright - Fall 2022 - ECE5424 Final - InTroCEPS
 #This stitched the IBTrACS data with the TCE-DAT data
 import pandas as pd
 import numpy as np
